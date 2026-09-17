@@ -1,0 +1,9 @@
+﻿Name,Quantity,Component
+"1",1," Breadboard Small"
+"U1",1," Arduino Uno R3"
+"D1",1,"Red LED"
+"R1",1,"220 Ω Resistor"
+"S1",1," Pushbutton"
+"R2",1,"10 kΩ Resistor"
+"Rpot1",1,"10 kΩ Potentiometer"
+"PIEZO1",1," Piezo"

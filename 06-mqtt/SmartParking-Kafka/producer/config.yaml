@@ -1,0 +1,12 @@
+kafka:
+  bootstrap_servers: "localhost:9092"
+
+topics:
+  sensor_data: "parking-data"
+  alerts: "parking-alerts"
+  dlq: "parking-dlq"
+
+parking:
+  total_spots: 20
+  temp_threshold: 50
+  sensor_interval_seconds: 2

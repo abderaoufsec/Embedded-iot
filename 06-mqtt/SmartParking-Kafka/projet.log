@@ -1,0 +1,50 @@
+start zookerper : 
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+start kafka : 
+bin\windows\kafka-server-start.bat config\server.properties
+
+
+
+
+
+create topics : 
+bin\windows\kafka-topics.bat --create --topic parking-data --bootstrap-server localhost:9092
+
+bin\windows\kafka-topics.bat --create --topic parking-alerts --bootstrap-server localhost:9092
+
+bin\windows\kafka-topics.bat --create --topic parking-dlq --bootstrap-server localhost:9092
+
+
+download labiers : 
+
+
+pip install kafka-python
+pip install pyyaml
+pip install streamlit
+pip install fastapi
+pip install uvicorn
+
+
+
+start producer : 
+python producer/producer.py
+
+
+
+start consumer :
+python consumer/consumer.py
+
+
+
+start storage consumer : 
+python storage/save_data.py
+
+
+
+run the dashboerd : 
+streamlit run dashboard/app.py 
+
+
+optional start api :
+uvicorn api.api:app --reload
