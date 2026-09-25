@@ -97,12 +97,14 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 
 ## Local Resources
 
-Resources stored locally in this repository (redistribution permitted):
+**No third-party PDFs or documentation are bundled in this repository.**
 
-| Resource | Location | Type | License/Status |
-|----------|----------|------|----------------|
-| ESP32 Datasheet | `resources/datasheets/esp32_datasheet_en.pdf` | PDF | Official Espressif documentation |
-| Educational Content | Phase README files | Markdown | Original curriculum content |
+The repository contains only:
+- Original educational content (Markdown files)
+- Circuit diagrams (PNG images for lab documentation)
+- Cheat sheets (original quick reference guides)
+
+All datasheets, official documentation, and external resources are accessed via links to their official sources.
 
 ## Resource Categories
 
