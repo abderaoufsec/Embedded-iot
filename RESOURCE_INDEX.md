@@ -13,8 +13,8 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 
 ## Resource Table
 
-| Topic | Resource | Type | Level | Cost | Official | URL |
-|-------|----------|------|-------|------|----------|-----|
+| Topic | Resource | Type | Level | Cost | Official | URL | Purpose |
+|-------|----------|------|-------|------|----------|-----|---------|
 | **General** | | | | | | |
 | Git | Git Documentation | Documentation | Beginner | Free | Yes | https://git-scm.com/doc |
 | Git | Pro Git Book | Book | Intermediate | Free | Yes | https://git-scm.com/book/en/v2 |
@@ -97,14 +97,13 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 
 ## Local Resources
 
-**No third-party PDFs or documentation are bundled in this repository.**
+**No third-party PDFs, documentation, or images are bundled in this repository.**
 
 The repository contains only:
 - Original educational content (Markdown files)
-- Circuit diagrams (PNG images for lab documentation)
 - Cheat sheets (original quick reference guides)
 
-All datasheets, official documentation, and external resources are accessed via links to their official sources.
+All datasheets, official documentation, circuit diagrams, and external resources are accessed via links to their official sources.
 
 ## Resource Categories
 
