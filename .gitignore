@@ -1,0 +1,66 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Build outputs
+build/
+dist/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+
+# ESP-IDF
+build/
+sdkconfig
+sdkconfig.old
+
+# Arduino
+*.cpp.o
+*.h.o
+*.ino.cpp.*
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Secrets and configuration
+.env
+.env.local
+config.h
+secrets/
+*.pem
+*.key
+*.crt
+
+# OS specific
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+myshell/
