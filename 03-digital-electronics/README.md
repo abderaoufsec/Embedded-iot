@@ -381,6 +381,7 @@ B ──┴─────────┘
 - **Provider:** Electronics Tutorials
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Learn about logic gates and Boolean algebra
 - **URL:** https://www.electronics-tutorials.ws/logic/
 
@@ -388,6 +389,7 @@ B ──┴─────────┘
 - **Provider:** All About Circuits
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Comprehensive digital electronics fundamentals
 - **URL:** https://www.allaboutcircuits.com/textbook/digital/
 
@@ -395,6 +397,7 @@ B ──┴─────────┘
 - **Provider:** SparkFun Electronics
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand pull-up and pull-down resistors
 - **URL:** https://learn.sparkfun.com/tutorials/pull-up-resistors
 
@@ -402,6 +405,7 @@ B ──┴─────────┘
 - **Provider:** Adafruit Learning System
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand analog-to-digital and digital-to-analog conversion
 - **URL:** https://learn.adafruit.com/adc-basics
 
@@ -409,6 +413,7 @@ B ──┴─────────┘
 - **Provider:** SparkFun Electronics
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Learn about pulse width modulation
 - **URL:** https://learn.sparkfun.com/tutorials/pulse-width-modulation
 

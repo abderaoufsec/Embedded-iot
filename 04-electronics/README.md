@@ -409,6 +409,7 @@ V+ ────┤        ├── GND
 - **Provider:** SparkFun Electronics
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Comprehensive electronics fundamentals
 - **URL:** https://learn.sparkfun.com/
 
@@ -416,6 +417,7 @@ V+ ────┤        ├── GND
 - **Provider:** All About Circuits
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** DC circuit theory and components
 - **URL:** https://www.allaboutcircuits.com/textbook/direct-current/
 
@@ -423,6 +425,7 @@ V+ ────┤        ├── GND
 - **Provider:** SparkFun Electronics
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Learn to use a multimeter
 - **URL:** https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter
 
@@ -430,6 +433,7 @@ V+ ────┤        ├── GND
 - **Provider:** SparkFun Electronics
 - **Level:** Intermediate
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand transistors for switching
 - **URL:** https://learn.sparkfun.com/tutorials/transistors
 
@@ -437,6 +441,7 @@ V+ ────┤        ├── GND
 - **Provider:** SparkFun Electronics
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Secondary reference
 - **Purpose:** Identify and understand electronic components
 - **URL:** https://www.sparkfun.com/categories/126
 
@@ -498,6 +503,7 @@ Follow this exact sequence:
 - LEDs require current limiting resistors
 - Calculate resistor: R = (Vsupply - VLED) / I
 - Example: (3.3V - 2.0V) / 0.01A = 130Ω (use 220Ω or 330Ω)
+- Note: When connecting LED to GPIO pin later, ensure total current is within GPIO limits (typically 20mA per pin)
 
 **Wiring:**
 ```
@@ -768,8 +774,13 @@ PWM output pin
 **Theory:**
 - Transistor acts as switch controlled by base current
 - Small base current controls larger collector current
-- Base resistor limits base current
+- Base resistor limits base current to safe level
 - Load connected to collector
+- Base resistor calculation: Rbase = (Vgpio - Vbe) / (Icollector / hFE)
+- Example: For 20mA LED with hFE=100, minimum Ib = 0.2mA, Rbase ≈ (3.3V - 0.7V) / 0.0002A = 13kΩ
+- Using 1kΩ provides more base current (2.6mA) for reliable saturation (fully ON state)
+- Note: hFE varies by transistor and current—consult datasheet
+- Ensure GPIO can provide required base current (typically 20mA max per pin)
 
 **Wiring:**
 ```
@@ -835,20 +846,25 @@ Power supply positive (+)
 - Completed Lab 5 (Transistor-controlled load)
 
 **Components:**
-- NPN transistor (e.g., 2N2222, BC547)
-- Small DC motor (low current, <500mA)
-- Diode (e.g., 1N4007)
-- Resistor for transistor base (1kΩ)
+- NPN transistor rated for motor current (e.g., 2N2222 for <800mA, BC547 for <100mA)
+- Small DC motor (low current, <500mA, check transistor rating)
+- Diode (e.g., 1N4007 or 1N4148)
+- Resistor for transistor base (1kΩ, calculate based on transistor hFE)
 - Breadboard
 - Jumper wires
-- Power supply (3.3V or 5V for motor, separate from GPIO)
+- Power supply (3-6V for motor, must share common GND with GPIO)
 - Multimeter
 
 **Theory:**
 - Motor is inductive load
-- Flyback diode protects transistor from voltage spike
+- Flyback diode protects transistor from voltage spike when motor turns off
 - Transistor switches motor current
-- Motor may require separate power supply
+- Motor may require separate power supply if current exceeds GPIO supply capability
+- Motor startup current can be 2-3x running current
+- Common ground is required between GPIO supply and motor supply
+- Transistor must be rated for motor current (including startup current)
+- Base resistor calculation: Rbase = (Vgpio - Vbe) / (Imotor / hFE)
+- Example: For 500mA motor with hFE=100, Ib = 5mA, Rbase ≈ (3.3V - 0.7V) / 0.005A = 520Ω (use 1kΩ for safety)
 
 **Wiring:**
 ```
@@ -858,15 +874,15 @@ GPIO pin
     │
    Transistor base
     │
-Transistor emitter ─── GND (common)
+Transistor emitter ─── GND (common with motor power supply GND)
     │
 Transistor collector
     │
-   Motor
+   Motor ─── Motor power supply positive (+)
     │
-Motor power supply positive (+)
+   Diode (cathode to motor power supply +, anode to transistor collector)
     │
-   Diode (cathode to motor +, anode to collector)
+   (Diode in parallel with motor)
 ```
 
 **Expected Behavior:**

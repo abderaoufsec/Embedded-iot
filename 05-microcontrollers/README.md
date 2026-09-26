@@ -98,6 +98,8 @@ After completing this phase, you will be able to:
 - Real-time operation often required
 - Typically used in embedded systems
 
+**Note:** Specific peripherals and their availability vary by MCU vendor and family. Not all MCUs have all peripherals. This phase teaches universal concepts—check your specific MCU datasheet for available peripherals.
+
 **Example applications:**
 - Microwave oven controller
 - Thermostat
@@ -506,6 +508,8 @@ GPIO_DIR |= (1 << 5);
 GPIO_OUT |= (1 << 5);
 ```
 
+**Note:** The base address and register offsets in this example are conceptual. Actual addresses and offsets vary by MCU vendor and family. Always consult your specific MCU's datasheet and reference manual for the correct memory map.
+
 **Why this matters:** Memory-mapped I/O is how you control hardware in C. Understanding it is essential for embedded programming.
 
 ### Polling vs Interrupts
@@ -569,7 +573,9 @@ GPIO_OUT |= (1 << 5);
 - Provides consistent API across different hardware
 - Hides register-level details
 - Simplifies application code
-- Portable across different MCUs
+- Portable across different MCUs (within same vendor or with abstraction)
+
+**Note:** HAL APIs vary by vendor. This is a conceptual example—actual HAL functions and naming conventions differ between vendors (STM32 HAL, ESP-IDF, Arduino, etc.).
 
 **Example:**
 ```c
@@ -577,7 +583,7 @@ GPIO_OUT |= (1 << 5);
 GPIO_DIR |= (1 << 5);
 GPIO_OUT |= (1 << 5);
 
-// With HAL
+// With HAL (example syntax varies by vendor)
 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 ```
 
@@ -647,6 +653,8 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 └─────────────────────────────────┘
 ```
 
+**Note:** This is a conceptual architecture. Actual implementations may have fewer or more layers depending on the system complexity and vendor conventions. Bare-metal systems may skip HAL/BSP layers entirely.
+
 **Why this matters:** Understanding the layered architecture helps you organize your code and understand how different software layers interact with hardware.
 
 ---
@@ -696,6 +704,7 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 - **Provider:** Embedded.com
 - **Level:** Beginner
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand microcontroller fundamentals
 - **URL:** https://www.embedded.com/
 
@@ -703,6 +712,7 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 - **Provider:** ARM Developer
 - **Level:** Advanced
 - **Cost:** Free
+- **Type:** Official / Primary
 - **Purpose:** Understand ARM processor architecture
 - **URL:** https://developer.arm.com/documentation/
 
@@ -710,6 +720,7 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 - **Provider:** Wikipedia
 - **Level:** Intermediate
 - **Cost:** Free
+- **Type:** Secondary reference
 - **Purpose:** Understand memory-mapped I/O concepts
 - **URL:** https://en.wikipedia.org/wiki/Memory-mapped_I/O
 
@@ -717,6 +728,7 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 - **Provider:** Embedded.com
 - **Level:** Intermediate
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand interrupt handling
 - **URL:** https://www.embedded.com/interrupts/
 
@@ -724,6 +736,7 @@ HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 - **Provider:** Embedded.com
 - **Level:** Advanced
 - **Cost:** Free
+- **Type:** Structured learning
 - **Purpose:** Understand Direct Memory Access
 - **URL:** https://www.embedded.com/dma/
 
