@@ -1186,15 +1186,30 @@ VCC (5V)
     │
 GND
     │
-VOUT (to ESP32 ADC)
+VOUT ─── Voltage divider (if needed) ─── ESP32 ADC
 ```
 
-**Important:**
+**CRITICAL - Voltage Conditioning:**
 - ACS712 requires 5V supply
 - ESP32 ADC is 3.3V max
-- **VOUT may exceed 3.3V** (check your model and current range)
-- **Voltage divider or level shifter may be required**
-- This lab assumes ACS712 output stays within ESP32 ADC range
+- ACS712 output is centered at VCC/2 = 2.5V at 0A
+- With positive current, VOUT = 2.5V + (current × sensitivity)
+- **For 5A model at full scale:** 2.5V + (5A × 0.185V/A) = 3.425V (exceeds 3.3V)
+- **For 20A model at full scale:** 2.5V + (20A × 0.1V/A) = 4.5V (exceeds 3.3V)
+- **For 30A model at full scale:** 2.5V + (30A × 0.066V/A) = 4.48V (exceeds 3.3V)
+
+**Voltage Divider Required:**
+- A voltage divider is required to scale ACS712 output to ESP32 ADC range
+- Example divider: 10kΩ from VOUT to ADC, 22kΩ from ADC to GND
+- This scales ~4.5V max to ~3.3V max
+- Software must account for divider ratio in current calculation
+
+**Alternative:**
+- Use ACS712 module with built-in voltage divider (check module specs)
+- Use ESP32 with external ADC that supports 5V input
+- Limit measured current range to stay within 3.3V (e.g., for 5A model, limit to ~4.3A max)
+
+**This lab:** Assumes you have implemented appropriate voltage conditioning (voltage divider or level shifter) between ACS712 VOUT and ESP32 ADC.
 
 **ESP32 Implementation (if VOUT within 3.3V):**
 ```cpp

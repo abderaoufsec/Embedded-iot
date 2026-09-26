@@ -147,18 +147,21 @@ After completing this phase, you will be able to:
 **ESP32-Specific:**
 - ~30 GPIO pins (varies by board)
 - 3.3V logic levels (not 5V tolerant on most pins)
-- Maximum current per pin: ~40mA (check specific board)
-- Total current limit: ~1200mA for all GPIO combined
+- **Recommended continuous current per pin: ~12mA** (check specific board datasheet)
+- **Absolute maximum per pin: 40mA** (for short durations only, not continuous operation)
+- **Total current limit: ~1200mA** absolute maximum for all GPIO combined (cumulative, check specific board)
 - Strapping pins have special functions at boot
 - Some pins are input-only or output-only
 - RTC GPIOs can wake from deep sleep
 
 **Safe Usage:**
 - Never apply 5V to ESP32 GPIO (will damage the chip)
-- Don't exceed per-pin current limit (~40mA)
+- **For continuous operation, stay within ~12mA per pin**
+- Don't exceed absolute maximum per-pin current (40mA) even briefly
 - Don't exceed total GPIO current limit (~1200mA)
 - Use current-limiting resistors with LEDs
 - Check datasheet for your specific ESP32 board variant
+- Different ESP32 modules may have different current limits
 
 **Why this matters:** GPIO limits are MCU-specific. ESP32 has different limits than STM32 or other MCUs. Exceeding these limits can damage the chip.
 
@@ -352,10 +355,12 @@ ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
 - Noise and variability between units
 
 **Voltage Ranges (ESP32-Specific):**
-- 0dB attenuation: 0-1.1V
-- 2.5dB attenuation: 0-1.5V
-- 6dB attenuation: 0-2.2V
-- 11dB attenuation: 0-3.3V
+- 0dB attenuation: 100 mV ~ 950 mV (suggested range)
+- 2.5dB attenuation: 100 mV ~ 1250 mV (suggested range)
+- 6dB attenuation: 150 mV ~ 1750 mV (suggested range)
+- 11dB attenuation: 150 mV ~ 2450 mV (suggested range)
+
+**Note:** These ranges are for ESP32 (original). Other ESP32 family chips (ESP32-S2, ESP32-S3, ESP32-C3) have different ADC characteristics. Always check the specific chip datasheet and ESP-IDF documentation for your exact device.
 
 **Arduino-ESP32:**
 ```cpp
@@ -843,11 +848,11 @@ Follow this exact sequence:
 **Objective:** Calculate safe GPIO usage for ESP32.
 
 **Tasks:**
-1. If an LED requires 15mA and ESP32 GPIO limit is 40mA, can you drive it directly? (assuming appropriate resistor)
+1. If an LED requires 15mA continuous and ESP32 GPIO recommended limit is 12mA, can you drive it directly for continuous operation? Why or why not?
 2. If you need to drive 10 LEDs at 15mA each from ESP32 GPIO, is this safe? Why or why not?
-3. What is the total GPIO current limit for ESP32 (typical)?
-4. What happens if you exceed the per-pin current limit?
-5. What happens if you exceed the total GPIO current limit?
+3. What is the recommended continuous GPIO current limit per pin for ESP32?
+4. What is the absolute maximum GPIO current per pin (for short durations)?
+5. What is the total GPIO current limit for ESP32 (typical absolute maximum)?
 
 **Expected Outcome:** You can calculate safe GPIO usage and understand ESP32 limits.
 
@@ -860,7 +865,7 @@ Follow this exact sequence:
 2. If ADC reads 2048 with 3.3V reference, what is the input voltage?
 3. If input voltage is 1.65V with 3.3V reference, what is the ADC reading?
 4. Why is ESP32 ADC non-linear at low voltages?
-5. What attenuation setting would you use for 3.3V input range?
+5. What attenuation setting would you use for a 2.4V input range on ESP32 (original)?
 
 **Expected Outcome:** You can perform ADC calculations and understand ESP32 ADC limitations.
 
@@ -1847,8 +1852,8 @@ Answer these questions without looking at the materials:
 1. How does ESP32's CPU differ from ARM Cortex-M?
 2. What is the difference between Arduino-ESP32 and ESP-IDF?
 3. When would you choose Arduino-ESP32 over ESP-IDF?
-4. What is the ESP32 GPIO current limit per pin (typical)?
-5. What is the ESP32 total GPIO current limit (typical)?
+4. What is the ESP32 GPIO recommended continuous current limit per pin?
+5. What is the ESP32 GPIO absolute maximum current per pin (short duration)?
 6. Can you apply 5V to ESP32 GPIO? Why or why not?
 7. What is ESP32's ADC resolution?
 8. Why is ESP32 ADC non-linear at low voltages?
@@ -1911,7 +1916,7 @@ Before moving to Phase 7, verify you have:
 - [ ] Understand how ESP32 implements universal MCU concepts
 - [ ] Can distinguish universal concepts from ESP32-specific behavior
 - [ ] Understand Arduino-ESP32 vs ESP-IDF differences
-- [ ] Understand ESP32 GPIO limits (current, voltage)
+- [ ] Understand ESP32 GPIO limits (recommended ~12mA continuous, absolute max 40mA short duration)
 - [ ] Can configure and use ESP32 GPIO safely
 - [ ] Can implement PWM using ESP32 LEDC
 - [ ] Can read analog sensors using ESP32 ADC
