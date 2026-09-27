@@ -60,13 +60,19 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 | **Networking** | | | | | | |
 | TCP/IP | TCP/IP Guide | Tutorial | Intermediate | Free | No | https://www.networkworld.com/article/3235677/what-is-tcp-ip-and-how-does-it-work.html |
 | HTTP | HTTP Overview | Tutorial | Beginner | Free | No | https://developer.mozilla.org/en-US/docs/Web/HTTP |
-| MQTT | MQTT Specification | Specification | Intermediate | Free | Yes | https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html |
 | DNS | DNS How It Works | Tutorial | Beginner | Free | No | https://howdns.works/ |
 | **MQTT** | | | | | | |
 | MQTT.org | MQTT Official Site | Documentation | Beginner | Free | Yes | https://mqtt.org/ |
 | MQTT Essentials | MQTT Tutorial | Tutorial | Beginner | Free | No | https://www.hivemq.com/mqtt-essentials/ |
 | MQTTX | MQTTX Client | Tool | Beginner | Free | No | https://mqttx.app/ |
 | Mosquitto | Mosquitto Broker | Software | Intermediate | Free | Yes | https://mosquitto.org/ |
+| **MQTT and IoT** | | | | | | |
+| MQTT Specification | MQTT 5.0 Specification | Specification | Advanced | Free | Yes | https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html |
+| Mosquitto Documentation | Mosquitto Documentation | Documentation | Intermediate | Free | Yes | https://mosquitto.org/documentation/ |
+| MQTT Essentials | HiveMQ MQTT Essentials | Tutorial | Beginner | Free | No | https://www.hivemq.com/mqtt-essentials/ |
+| ESP-MQTT | ESP-IDF MQTT Component | Documentation | Intermediate | Free | Yes | https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/protocols/mqtt.html |
+| PubSubClient | Arduino MQTT Library | Library | Beginner | Free | No | https://pubsubclient.knolleary.net/ |
+| MQTTX | MQTT Client Tool | Tool | Beginner | Free | No | https://mqttx.app/ |
 | **Linux** | | | | | | |
 | Linux Tutorial | Linux Journey | Tutorial | Beginner | Free | No | https://linuxjourney.com/ |
 | Linux Command | Linux Commands | Reference | Beginner | Free | No | https://cheat.sh/ |
