@@ -183,7 +183,7 @@ This roadmap shows the complete learning path from beginner to advanced embedded
 25. Industrial edge gateway
 
 ### Capstone
-Complete motor monitoring/predictive maintenance IoT system
+Complete integrated IoT system
 
 ## Time Estimates
 

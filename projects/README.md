@@ -43,7 +43,7 @@ Complex systems requiring multiple skills:
 
 ### Capstone
 Complete integrated system:
-- Motor monitoring/predictive maintenance IoT system
+- Complete integrated IoT system
 
 ## Project Standard
 
