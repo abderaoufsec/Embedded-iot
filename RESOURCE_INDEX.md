@@ -89,24 +89,34 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 | **Raspberry Pi** | | | | | | |
 | Raspberry Pi Documentation | Official Docs | Documentation | Beginner | Free | Yes | https://www.raspberrypi.com/documentation/ |
 | Raspberry Pi GPIO | GPIO Reference | Documentation | Beginner | Free | Yes | https://www.raspberrypi.com/documentation/computers/raspberry-pi.html |
+|| Raspberry Pi Pico | Pico Documentation | Documentation | Beginner | Free | Yes | https://www.raspberrypi.com/documentation/rp2040/ |
+|| WiringPi | WiringPi Documentation | Documentation | Intermediate | Free | Yes | http://wiringpi.com/
 | Pi Python | Python on Pi | Tutorial | Beginner | Free | No | https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up |
 | **Debugging** | | | | | | |
 | GDB | GDB Documentation | Documentation | Advanced | Free | Yes | https://www.sourceware.org/gdb/documentation/ |
 | Debugging Techniques | Debugging Guide | Tutorial | Intermediate | Free | No | https://www.embedded.com/debugging-embedded-systems/ |
+|| JTAG/SWD | ARM Debug Documentation | Documentation | Advanced | Free | Yes | https://developer.arm.com/documentation/ddi0419/c/
 | Logic Analyzer | Logic Analyzer Guide | Tutorial | Intermediate | Free | No | https://www.sparkfun.com/tutorials/235 |
 | **FreeRTOS** | | | | | | |
 | FreeRTOS Official | FreeRTOS Documentation | Documentation | Advanced | Free | Yes | https://www.freertos.org/Documentation/RTOS_book.html |
 | FreeRTOS Tutorial | FreeRTOS Tutorial | Tutorial | Intermediate | Free | No | https://www.freertos.org/RTOS/Real-time-embedded-RTOS-tutorial.html |
+|| FreeRTOS API | FreeRTOS API Reference | Documentation | Advanced | Free | Yes | https://www.freertos.org/a00106.html |
 | **Security** | | | | | | |
 | Embedded Security | Security Guide | Tutorial | Advanced | Free | No | https://www.embedded.com/security/ |
 | TLS/SSL | Let's Encrypt | Documentation | Intermediate | Free | Yes | https://letsencrypt.org/docs/ |
+|| NIST Cybersecurity | NIST IoT Guide | Documentation | Advanced | Free | Yes | https://csrc.nist.gov/publications/detail/sp/800-183/final |
+|| IEC 62443 | IEC 62443 Standard | Specification | Advanced | Free | Yes | https://www.iec.ch/standard-62443 |
 | OWASP IoT | OWASP IoT Security | Documentation | Advanced | Free | Yes | https://owasp.org/www-project-iot-security/ |
 | **STM32** | | | | | | |
 | STM32 Documentation | STMicroelectronics Docs | Documentation | Advanced | Free | Yes | https://www.st.com/resource/en/user_manual/dm00105879.pdf |
 | STM32CubeIDE | STM32CubeIDE | Software | Advanced | Free | Yes | https://www.st.com/en/development-tools/stm32cubeide.html |
+|| STM32CubeMX | STM32CubeMX Documentation | Documentation | Intermediate | Free | Yes | https://www.st.com/zh/development-tools/stm32cubemx/
+|| STM32 HAL | STM32 HAL User Manual | Documentation | Advanced | Free | Yes | https://www.st.com/resource/en/user_manual/dm00168279/
+|| ARM CMSIS | CMSIS Documentation | Documentation | Advanced | Free | Yes | https://arm-software.github.io/CMSIS_5/ |
 | STM32 HAL | HAL Documentation | Documentation | Advanced | Free | Yes | https://www.st.com/resource/en/user_manual/dm00168279.pdf |
 | **Industrial IoT** | | | | | | |
 | Modbus | Modbus Specification | Specification | Advanced | Free | Yes | https://modbus.org/specifications |
+|| CAN in Automation | CiA Standards | Documentation | Advanced | Free | Yes | https://www.can-cia.org/
 | OPC UA | OPC UA Foundation | Documentation | Advanced | Free | Yes | https://opcfoundation.org/ |
 | Industrial Ethernet | Industrial Ethernet Guide | Tutorial | Advanced | Free | No | https://www.control.com/ |
 
