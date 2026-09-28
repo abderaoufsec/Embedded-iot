@@ -73,10 +73,19 @@ This curriculum does NOT redistribute copyrighted books or course materials. Ins
 | ESP-MQTT | ESP-IDF MQTT Component | Documentation | Intermediate | Free | Yes | https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/protocols/mqtt.html |
 | PubSubClient | Arduino MQTT Library | Library | Beginner | Free | No | https://pubsubclient.knolleary.net/ |
 | MQTTX | MQTT Client Tool | Tool | Beginner | Free | No | https://mqttx.app/ |
-| **Linux** | | | | | | |
-| Linux Tutorial | Linux Journey | Tutorial | Beginner | Free | No | https://linuxjourney.com/ |
-| Linux Command | Linux Commands | Reference | Beginner | Free | No | https://cheat.sh/ |
-| Systemd | Systemd Documentation | Documentation | Intermediate | Free | Yes | https://www.freedesktop.org/software/systemd/man/ |
+|| **Linux** | | | | | |
+|| Linux Tutorial | Linux Journey | Tutorial | Beginner | Free | No | https://linuxjourney.com/ |
+|| Linux Command | Linux Commands | Reference | Beginner | Free | No | https://cheat.sh/ |
+|| GNU Bash | GNU Bash Manual | Documentation | Intermediate | Free | Yes | https://www.gnu.org/software/bash/manual/ |
+|| GNU Coreutils | GNU Coreutils Manual | Documentation | Intermediate | Free | Yes | https://www.gnu.org/software/coreutils/manual/ |
+|| Linux Man Pages | Linux Man Pages | Documentation | Beginner | Free | Yes | https://man7.org/linux/man-pages/ |
+|| Ubuntu Documentation | Ubuntu Documentation | Documentation | Beginner | Free | Yes | https://ubuntu.com/server/docs/ |
+|| Debian Documentation | Debian Documentation | Documentation | Beginner | Free | Yes | https://www.debian.org/doc/ |
+|| Systemd | Systemd Documentation | Documentation | Intermediate | Free | Yes | https://www.freedesktop.org/software/systemd/man/ |
+|| OpenSSH | OpenSSH Documentation | Documentation | Intermediate | Free | Yes | https://www.openssh.com/manual/ |
+|| GCC | GCC Documentation | Documentation | Intermediate | Free | Yes | https://gcc.gnu.org/onlinedocs/ |
+|| GDB | GDB Documentation | Documentation | Advanced | Free | Yes | https://sourceware.org/gdb/documentation/ |
+|| Make | Make Documentation | Documentation | Intermediate | Free | Yes | https://www.gnu.org/software/make/manual/ |
 | **Raspberry Pi** | | | | | | |
 | Raspberry Pi Documentation | Official Docs | Documentation | Beginner | Free | Yes | https://www.raspberrypi.com/documentation/ |
 | Raspberry Pi GPIO | GPIO Reference | Documentation | Beginner | Free | Yes | https://www.raspberrypi.com/documentation/computers/raspberry-pi.html |
