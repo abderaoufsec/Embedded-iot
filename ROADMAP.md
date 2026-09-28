@@ -332,6 +332,8 @@ You are progressing successfully when:
 4. Build projects systematically
 5. Develop deep understanding through practice
 
+note : the repo still under work
+
 ---
 
 **This roadmap is your guide. Follow it, complete each phase thoroughly, and you will develop genuine embedded/IoT expertise.**
